@@ -1,0 +1,65 @@
+<h1
+  style="
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    background: blue;
+  ">
+  {{nombre}}
+</h1>
+<div class="centrar">
+  <table border="1">
+    <thead>
+      <tr style="border: 1px;">
+        <th>Nombre completo</th>
+        <th>Edad</th>
+        <th>Telefono</th>
+        <th>Correo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <td *ngFor="let usu of usuario">
+        {{usu}}
+      </td>
+    </tbody>
+  </table>
+</div>
+
+<div class="cont-btn">
+  <button type="button" (click)="cambiarNombre()">Cambiar</button>
+</div>
+
+<div *ngIf="bandera === true" class="cont-btn">
+  Precionaste el boton
+</div>
+
+
+<div>
+  <label>Dias de la semana</label>
+  <select name="dias_semanas" [(ngModel)]="diasSeleccionados">
+
+    <option *ngFor="let dia of diasSemana" [value]="dia.diaSolo">
+      {{dia.diaSolo}}
+    </option>
+  </select>
+</div>
+
+<h1>{{diasSeleccionados}}</h1>
+
+<button type="button" (click)="mostrarArrayMod()">Mostrar id's</button>
+
+<div class="cont">
+  <div class="items cont-entradas">
+    <label>Ingresa el año</label>
+    <br>
+    <input type="text" [(ngModel)]="anioSelecionado">
+  </div>
+  <div class="items cont-btns">
+    <button type="button" (click)="mostrarAnio()">Calcular siglo</button>
+  </div>
+  <div class="items cont-mensaje">
+    El año seleccionado es {{anioSelecionado}} y el siglo es {{siglo}}
+  </div>
+</div>
+
+<button type="button" (click)="miFuncion2()"> Mostrar arreglo </button>

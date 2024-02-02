@@ -1,0 +1,76 @@
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="height: 70vh;">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner" style="height: 70vh; ">
+    <div class="carousel-item active">
+      <img [src]="font2" class="d-block w-100 h-25" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img [src]="font4" class="d-block w-100 h-25" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img [src]="font3" class="d-block w-100 h-25" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<h1 class="title-primary">Personajes de Rick And Morty</h1>
+<div class="centrar">
+  <div class="card" style="width: 18rem; display: inline-block; margin: 10px 15px;" *ngFor="let personaje of data1">
+    <img [src]="personaje.image" class="card-img-top" alt="...">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Nombre: {{personaje.name}}</li>
+      <li class="list-group-item">Estado: {{personaje.status}}</li>
+      <li class="list-group-item">Especie: {{personaje.species}}</li>
+    </ul>
+    <div class="card-body">
+      <button type="button" class="btn btn-warning">Más informacion</button>
+    </div>
+  </div>
+</div>
+<div class="cont-btn" >
+  <button class="btn btn-outline-warning" (click)="mostrarInfo()">Mostrar más personajes</button>
+</div>
+<div class="alert alert-warning" style="width: 80%; margin: 0px auto; " role="alert" *ngIf="estado === true">
+  Estos son los algunos personajes de Rick and Morty
+</div>
+<div class="centrar">
+  <div class="card" style="width: 18rem; display: inline-block; margin: 10px 15px;" *ngFor="let personaje of arrayAux">
+    <img [src]="personaje.image" class="card-img-top" alt="...">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Nombre: {{personaje.name}}</li>
+      <li class="list-group-item">Estado: {{personaje.status}}</li>
+      <li class="list-group-item">Especie: {{personaje.species}}</li>
+    </ul>
+    <div class="card-body">
+      <button type="button" class="btn btn-warning">Más informacion</button>
+    </div>
+  </div>
+  <!--<div class="cont-btn">
+    <button type="button" (click)="ocultar()" class="btn btn-danger">Ocultar personajes</button>
+  </div>-->
+</div>
+
+<div class="centrar">
+  <h1>Esenarios</h1>
+  <div class="cont-btns">
+    <button type="button" class="btn btn-warning" (click)="esenario(1)"> 1 </button>
+    <button type="button" class="btn btn-warning" (click)="esenario(2)"> 2 </button>
+    <button type="button" class="btn btn-warning" (click)="esenario(3)"> 3 </button>
+    <button type="button" class="btn btn-warning" (click)="esenario(4)"> 4 </button>
+  </div>
+  <div class="cont-image">
+    <img [src]="imagen">
+    <h3 style="text-align: center;" > {{textImg}} </h3>
+  </div>
+</div>

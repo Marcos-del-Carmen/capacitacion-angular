@@ -1,0 +1,49 @@
+.centrar {
+  width: 50%;
+  margin: 0px auto;
+}
+.centrar table {
+  width: 100%;
+  border-radius: 5px;
+  background-color: azure;
+}
+
+.centrar td,
+.centrar th {
+  padding: 5px;
+}
+
+.cont-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0px;
+}
+
+button {
+  background: blue;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+}
+
+.cont {
+  border-radius: 10px;
+  width: 300px;
+  height: 150px;
+  border: 1px solid #333;
+  padding: 10px;
+  margin: 20px auto;
+}
+
+.cont-mensaje {
+  width: 250px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.items {
+  margin-top: 10px;
+}
+
